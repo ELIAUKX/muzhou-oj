@@ -25,6 +25,26 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        <!--引入docker-java的依赖-->
+        <!-- https://mvnrepository.com/artifact/com.github.docker-java/docker-java -->
+        <dependency>
+            <groupId>com.github.docker-java</groupId>
+            <artifactId>docker-java</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.docker-java/docker-java-transport-httpclient5 -->
+        <dependency>
+            <groupId>com.github.docker-java</groupId>
+            <artifactId>docker-java-transport-httpclient5</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        <!--引入hutool工具类-->
+        <!-- https://hutool.cn/docs/index.html#/-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.8</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -66,7 +86,8 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.muzhou.mzojcodesandbox.MzojCodeSandboxApplication</mainClass>
-                    <skip>true</skip>
+                    <!--这里一定要改为false！！！-->
+                    <skip>false</skip>
                 </configuration>
                 <executions>
                     <execution>
